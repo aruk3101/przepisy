@@ -10,6 +10,7 @@ import RecipeForm from './components/recipes/RecipeForm';
 import RecipeCard from './components/recipes/RecipeCard';
 import useLocalStorage from './hooks/useLocalStorage';
 import Favourites from './components/recipes/Favourites';
+import "./App.css";
 
 function App() {
   const [recipes, setRecipes] = useLocalStorage('recipes', []);
@@ -61,9 +62,12 @@ function App() {
 
   return (
     <Router>
-      <div className="container mt-5">
+      <div id="main" className="container mt-5">
         <Navbar />
         <h1 className="text-center">Kreator Przepisów Kulinarnych</h1>
+        <p className='m-auto align-self-center d-flex align-items-center justify-content-center'>
+          <img src='https://static.tiktokemoji.com/202411/03/OaR81mfY.webp' style={{maxWidth:"300px"}}/>
+        </p>
         <Routes>
           <Route
             path="/"
